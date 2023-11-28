@@ -17,7 +17,7 @@
   <!-- Vendor CSS Files -->
   <link href="assets/customstyle.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="all">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
@@ -25,6 +25,8 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/print.css" rel="stylesheet">
+  <link href="assets/css/bootstrap-print.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: MyResume
@@ -36,13 +38,17 @@
 </head>
 
 <body>
-
+  <header class="headerfooter">
+    <div style="display: flex; justify-content: center; gap: 20px;">
+      <a href="https://facebook.com/dominik.zaranko" class="facebook"><i class="bx bxl-facebook"></i></a>
+      <span>Email me:<a href="mailto:dominik.zaranko@stud.vilniustech.lt">dominik.zaranko@stud.vilniustech.lt</a></span>
+    </div>
+  </header>
   <!-- ======= Mobile nav toggle button ======= -->
-  <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
-  <i class="bi bi-list mobile-nav-toggle d-lg-none"></i>
+  <!--<button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
+  <i class="bi bi-list mobile-nav-toggle d-sm-none"></i>
   <!-- ======= Header ======= -->
-  <header id="header" class="d-flex flex-column justify-content-center">
-
+  <header id="header" class="d-flex flex-column justify-content-center navbar-wrapper">
     <nav id="navbar" class="navbar nav-menu">
       <ul>
         <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
@@ -53,7 +59,6 @@
         <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
       </ul>
     </nav><!-- .nav-menu -->
-
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
@@ -61,12 +66,15 @@
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
       <h1>Dominik Zaranko</h1>
       <p>I'm <span class="typed" data-typed-items="a Student,an Engineer,a Programmer,a Computer Hobbyist"></span></p>
+      <div class="social-links">
+        <a href="https://facebook.com/dominik.zaranko" class="facebook"><i class="bx bxl-facebook"></i></a>
+      </div>
     </div>
   </section><!-- End Hero -->
 
   <main id="main">
     <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+    <section id="about" class="about printme">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
           <h2>About</h2>
@@ -95,7 +103,7 @@
                   <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor's</span></li>
                 </ul>
               </div>
-<p><br>I'm an Electrical Engineering student with a keen interest in technology. My studies focus on circuit design and signal processing, while my personal interests lie in Networking, 3D Printing and System Administration. I have a home server, I also enjoy other hands-on projects, especially those involving microcontrollers, as they allow me to apply my academic knowledge in practical ways.</p>
+              <p><br>I'm an Electrical Engineering student with a keen interest in technology. My studies focus on circuit design and signal processing, while my personal interests lie in Networking, 3D Printing and System Administration. I have a home server, I also enjoy other hands-on projects, especially those involving microcontrollers, as they allow me to apply my academic knowledge in practical ways.</p>
             </div>
             
           </div>
@@ -105,7 +113,7 @@
     </section><!-- End About Section -->
 
     <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills section-bg">
+    <section id="skills" class="skills section-bg printme">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -171,7 +179,7 @@
     </section><!-- End Skills Section -->
 
     <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume">
+    <section id="resume" class="resume printme">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -204,7 +212,7 @@
     </section><!-- End Resume Section -->
 
     <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio">
+    <section id="portfolio" class="printme">
       <div class="container" >
         <div class="section-title">
           <h2>Portfolio</h2>
@@ -213,15 +221,15 @@
 
         <div class="portfolio-ct">
           <div class="portfolio-item" data-aos="fade-up">
-            <img src="assets/img/portfolio/portfolio-1.jpg">
+            <img src="assets/img/portfolio/portfolio-1.jpg" alt="PCB image">
           </div>
 
           <div class="portfolio-item" data-aos="fade-up">
-            <img src="assets/img/portfolio/portfolio-2.jpg">
+            <img src="assets/img/portfolio/portfolio-2.jpg" alt="PCB image2">
           </div>
 
           <div class="portfolio-item" data-aos="fade-up">
-            <img src="assets/img/portfolio/portfolio-3.jpg">
+            <img src="assets/img/portfolio/portfolio-3.jpg" alt="PCB image3">
           </div>
         </div>
       </div>
@@ -229,7 +237,7 @@
     <!-- End Portfolio Section --> 
 
     <!-- Services Section -->
-    <section id="services">
+    <section id="services" class="printme">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
           <h2>Services</h2>
@@ -240,7 +248,7 @@
                   <div class="flex-title">
                       <h4>YouTube Video</h4>
                   </div>
-                  <iframe src="https://www.youtube.com/embed/aVUqaB0IMh4?si=Q3c5heQ_yAS2G6Cj" frameborder="0" allowfullscreen></iframe>
+                  <iframe src="https://www.youtube.com/embed/aVUqaB0IMh4?si=Q3c5heQ_yAS2G6Cj" allowfullscreen></iframe>
           </div>
 
           <!-- Local Video Item -->
@@ -266,12 +274,12 @@
           </div>
         </div>
       </div>
-  </section>
-<!-- End Services Section --> 
+    </section>
+    <!-- End Services Section --> 
 
-  <div class="print-button">
-    <button class="button" id="print" onclick="window.print();return false;">Print</button>
-  </div>
+    <div class="print-button">
+      <button class="button" id="print" onclick="window.print();return false;">Print</button>
+    </div>
   </main><!-- End #main -->
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -289,7 +297,11 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <footer class="headerfooter">
+    <div style="display: flex; justify-content: center; gap: 20px;">
+      <span>Dominik Zaranko EF-22/1</span>
+      <a href="https://facebook.com/dominik.zaranko" class="facebook"><i class="bx bxl-facebook"></i></a>
+      <span>Email me:<a href="mailto:dominik.zaranko@stud.vilniustech.lt">dominik.zaranko@stud.vilniustech.lt</a></span>
+    </div>  </footer>
 </body>
-
 </html>

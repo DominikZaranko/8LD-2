@@ -194,8 +194,11 @@ h6 {
   color: #45505b;
 }
 
-@media (min-width: 992px) {
-
+@media (min-width: 576px) {
+  .navbar-wrapper{
+    position: fixed;
+    width: fit-content;
+  }
   .nav-menu a,
   .nav-menu a:focus {
     width: 56px;
@@ -1082,4 +1085,24 @@ Custom thing
   cursor: pointer;
   width: 100px; /* Set a specific width */
   height: 40px; /* Set a specific height */
+}
+.headerfooter{
+  font-size: xx-small;
+  background-color: lightgray;
+  font-family: Arial, sans-serif;
+}
+.nav-menu a{
+  background: lightgray !important;
+  color: black !important;
+}
+.nav-menu a:hover{
+  background: grey !important;
+  color: black !important;
+}
+.nav-menu .active{
+  background: darkslategray !important;
+  color: white !important;
+}
+#hero .social-links a {
+  color: darkslategrey
 }

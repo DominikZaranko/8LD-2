@@ -1,43 +1,43 @@
 @media print {
-    body {
-      background-color: #FFFFFF;
-      background-image: none;
-      color: #000000;
-      font-family: serif;
-    }
-  
-    #contentarea {
-      width: 100% !important;
-      justify-content: left !important;
-      align-items: left !important;
-    }
-  
-    #hero, #header, .back-to-top, #services, button[id=print]{
-        display: none !important;
-    }
-
-    .progress-bar-wrap {
-        display: none;
-    }
-    #portfolio .container, #skills .container {
-        page-break-inside: avoid;
-    }
-    #portfolio .container {
-      justify-content: left !important;
-    }
-    #portfolio .container .section-title {
-      justify-self: left;
-      width: 50%;
-    }
-    .portfolio-ct {
-      width: 100%;
-      justify-content: left !important;
-
-    }
-    .portfolio-item{
-      max-width: 50% !important;
-      flex: 0 0 50% !important;
-      padding: 10px !important;
-    }
+  body {
+    background-color: #FFFFFF;
+    background-image: none;
+    color: #000000;
+    font-family: serif;
   }
-  
+  main{
+    page-break-after: avoid;
+    page-break-before: avoid;
+  }
+  #contentarea {
+    width: 100% !important;
+    justify-content: left !important;
+    align-items: left !important;
+  }
+  main > :not(.printme), body > :not(main),
+  #hero, #header, #preloader + .back-to-top, #services,
+  button[id=print], .header, #header, .navbar-wrapper, .nav-menu a, a i
+  {
+    display: none !important;
+  }
+  #portfolio .container, #skills .container, #resume .container {
+      page-break-inside: avoid;
+  }
+  #portfolio .container {
+    justify-content: left !important;
+  }
+  #portfolio .container .section-title {
+    justify-self: left;
+    width: 50%;
+  }
+  .portfolio-ct {
+    width: 100%;
+    justify-content: left !important;
+
+  }
+  .portfolio-item{
+    max-width: 50% !important;
+    flex: 0 0 50% !important;
+    padding: 10px !important;
+  }
+}
