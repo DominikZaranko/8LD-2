@@ -1,0 +1,43 @@
+@media print {
+    body {
+      background-color: #FFFFFF;
+      background-image: none;
+      color: #000000;
+      font-family: serif;
+    }
+  
+    #contentarea {
+      width: 100% !important;
+      justify-content: left !important;
+      align-items: left !important;
+    }
+  
+    #hero, #header, .back-to-top, #services, button[id=print]{
+        display: none !important;
+    }
+
+    .progress-bar-wrap {
+        display: none;
+    }
+    #portfolio .container, #skills .container {
+        page-break-inside: avoid;
+    }
+    #portfolio .container {
+      justify-content: left !important;
+    }
+    #portfolio .container .section-title {
+      justify-self: left;
+      width: 50%;
+    }
+    .portfolio-ct {
+      width: 100%;
+      justify-content: left !important;
+
+    }
+    .portfolio-item{
+      max-width: 50% !important;
+      flex: 0 0 50% !important;
+      padding: 10px !important;
+    }
+  }
+  

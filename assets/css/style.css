@@ -30,7 +30,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: Arial, sans-serif;
+  font-size: large;
+  font-weight: bold;
 }
 
 /*--------------------------------------------------------------
@@ -43,7 +45,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #0563bb;
+  background: #bb7805;
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -57,7 +59,7 @@ h6 {
 }
 
 .back-to-top:hover {
-  background: #0678e3;
+  background: #e3d406;
   color: #fff;
 }
 
@@ -353,7 +355,7 @@ h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 30px 0;
   overflow: hidden;
 }
 
@@ -366,8 +368,8 @@ section {
   font-size: 32px;
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
   position: relative;
   color: #45505b;
 }
@@ -575,224 +577,42 @@ section {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
-.portfolio .portfolio-item {
-  margin-bottom: 30px;
-}
-
-.portfolio #portfolio-flters {
-  padding: 0;
-  margin: 0 auto 25px auto;
-  list-style: none;
+#portfolio {
   text-align: center;
-  background: #fff;
-  border-radius: 50px;
-  padding: 2px 15px;
+  margin: 20px;
 }
 
-.portfolio #portfolio-flters li {
-  cursor: pointer;
-  display: inline-block;
-  padding: 10px 15px;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1;
-  text-transform: uppercase;
-  color: #272829;
-  margin-bottom: 5px;
-  transition: all 0.3s ease-in-out;
+#portfolio h2 {
+  margin-bottom: 10px;
 }
 
-.portfolio #portfolio-flters li:hover,
-.portfolio #portfolio-flters li.filter-active {
-  color: #0563bb;
+.portfolio-ct {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* This creates space between the items */
+  justify-content: center;
 }
 
-.portfolio #portfolio-flters li:last-child {
-  margin-right: 0;
-}
-
-.portfolio .portfolio-wrap {
-  transition: 0.3s;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  background: rgba(69, 80, 91, 0.8);
-}
-
-.portfolio .portfolio-wrap::before {
-  content: "";
-  background: rgba(255, 255, 255, 0.7);
-  position: absolute;
-  left: 30px;
-  right: 30px;
-  top: 30px;
-  bottom: 30px;
-  transition: all ease-in-out 0.3s;
-  z-index: 2;
-  opacity: 0;
-}
-
-.portfolio .portfolio-wrap .portfolio-info {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  text-align: center;
-  z-index: 3;
-  transition: all ease-in-out 0.3s;
+.portfolio-item {
+  flex: 1 1 200px; /* Each item will try to be at least 200px wide */
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  width: calc(33.333% - 25px); /* Subtract the gap from the width */
 }
 
-.portfolio .portfolio-wrap .portfolio-info::before {
-  display: block;
-  content: "";
-  width: 48px;
-  height: 48px;
-  position: absolute;
-  top: 35px;
-  left: 35px;
-  border-top: 3px solid #d7dce1;
-  border-left: 3px solid #d7dce1;
-  transition: all 0.5s ease 0s;
-  z-index: 9994;
+.portfolio-item img {
+  max-width: 100%; /* Images will now take up the full width of their container */
+  height: auto;
+  margin-bottom: 5px;
 }
 
-.portfolio .portfolio-wrap .portfolio-info::after {
-  display: block;
-  content: "";
-  width: 48px;
-  height: 48px;
-  position: absolute;
-  bottom: 35px;
-  right: 35px;
-  border-bottom: 3px solid #d7dce1;
-  border-right: 3px solid #d7dce1;
-  transition: all 0.5s ease 0s;
-  z-index: 9994;
+@media (max-width: 600px) {
+  .portfolio-item {
+    width: 100%; /* Full width on mobile devices */
+  }
 }
 
-.portfolio .portfolio-wrap .portfolio-info h4 {
-  font-size: 20px;
-  color: #45505b;
-  font-weight: 600;
-}
-
-.portfolio .portfolio-wrap .portfolio-info p {
-  color: #45505b;
-  font-size: 14px;
-  text-transform: uppercase;
-  padding: 0;
-  margin: 0;
-}
-
-.portfolio .portfolio-wrap .portfolio-links {
-  text-align: center;
-  z-index: 4;
-}
-
-.portfolio .portfolio-wrap .portfolio-links a {
-  color: #45505b;
-  margin: 0 2px;
-  font-size: 28px;
-  display: inline-block;
-  transition: 0.3s;
-}
-
-.portfolio .portfolio-wrap .portfolio-links a:hover {
-  color: #148af9;
-}
-
-.portfolio .portfolio-wrap:hover::before {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 1;
-}
-
-.portfolio .portfolio-wrap:hover .portfolio-info {
-  opacity: 1;
-}
-
-.portfolio .portfolio-wrap:hover .portfolio-info::before {
-  top: 15px;
-  left: 15px;
-}
-
-.portfolio .portfolio-wrap:hover .portfolio-info::after {
-  bottom: 15px;
-  right: 15px;
-}
-
-/*--------------------------------------------------------------
-# Portfolio Details
---------------------------------------------------------------*/
-.portfolio-details {
-  padding-top: 40px;
-}
-
-.portfolio-details .portfolio-details-slider img {
-  width: 100%;
-}
-
-.portfolio-details .portfolio-details-slider .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: #fff;
-  opacity: 1;
-  border: 1px solid #0563bb;
-}
-
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #0563bb;
-}
-
-.portfolio-details .portfolio-info {
-  padding: 30px;
-  box-shadow: 0px 0 30px rgba(69, 80, 91, 0.08);
-}
-
-.portfolio-details .portfolio-info h3 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
-}
-
-.portfolio-details .portfolio-info ul {
-  list-style: none;
-  padding: 0;
-  font-size: 15px;
-}
-
-.portfolio-details .portfolio-info ul li+li {
-  margin-top: 10px;
-}
-
-.portfolio-details .portfolio-description {
-  padding-top: 30px;
-}
-
-.portfolio-details .portfolio-description h2 {
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.portfolio-details .portfolio-description p {
-  padding: 0;
-}
 
 /*--------------------------------------------------------------
 # Services
@@ -1125,17 +945,21 @@ section {
   padding: 10px 12px;
 }
 
-.contact .php-email-form button[type=submit] {
-  background: #0563bb;
+.contact .php-email-form button[type=submit]{
+  background: #8472a5;
   border: 0;
-  padding: 10px 35px;
+  
   color: #fff;
   transition: 0.4s;
   border-radius: 50px;
 }
 
+.contact .php-email-form button[type=submit] {
+  padding: 10px 35px;
+}
+
 .contact .php-email-form button[type=submit]:hover {
-  background: #0678e3;
+  background: #0d00a0;
 }
 
 @keyframes animate-loading {
@@ -1206,4 +1030,56 @@ section {
 
 #footer .credits {
   font-size: 13px;
+}
+
+/*----------------------------------------------------
+Custom thing
+----------------------------------------------------*/
+.flex-title h4{
+  justify-content: center;
+  align-content: center;
+  padding: 10px;
+  padding-bottom: 5px;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: start;
+}
+.flex-item {
+  flex: 0 0 50%;
+  max-width: 50%;
+  box-sizing: border-box;
+  padding: 15px;
+  padding-bottom: 10px;
+}
+@media screen and (max-width: 992px){
+  .flex-item {
+    flex: 0 0 90%;
+    max-width: 100%;
+  }
+}
+.flex-item > iframe, .flex-item > video, .flex-item > audio{
+  width: 100%;
+}
+.flex-item > iframe, .flex-item > video{
+  height: 100%;
+  aspect-ratio: 16/9;
+}
+.print-button {
+  text-align: right;
+  margin-bottom: 2rem;
+  margin-right: 7rem;
+}
+.print-button > button{
+  background: #8472a5;
+  color: whitesmoke;
+  border: none;
+  border-radius: 5px; /* Less pronounced border-radius for a subtler look */
+  padding: 10px 15px; /* Padding to increase the button's size */
+  font-size: 16px; /* Adjust font size to your preference */
+  cursor: pointer;
+  width: 100px; /* Set a specific width */
+  height: 40px; /* Set a specific height */
 }
