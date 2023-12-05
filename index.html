@@ -28,6 +28,8 @@
   <link href="assets/css/print.css" rel="stylesheet">
   <link href="assets/css/bootstrap-print.css" rel="stylesheet">
 
+  <link rel="script" href="assets/js/clock.js">
+  <script src="assets/js/clock.js"></script>
   <!-- =======================================================
   * Template Name: MyResume
   * Updated: Sep 18 2023 with Bootstrap v5.3.2
@@ -279,6 +281,106 @@
     <div class="print-button">
       <button class="button" id="print" onclick="window.print();return false;">Print</button>
     </div>
+    
+      <div class="math-container">
+        <!-- First Equation -->
+        <math display="block">
+            <mi>f(a)</mi>
+            <mo>=</mo>
+            <mrow>
+                <mfrac>
+                    <mn>1</mn>
+                    <mrow>
+                        <mn>2</mn>
+                        <mi>&#x03C0;</mi> <!--pi-->
+                        <mi>i</mi>
+                    </mrow>                    
+                </mfrac>
+                <mo>&#x222E;</mo> <!--Line Integral-->
+                <mfrac>
+                    <mi>f(z)</mi>
+                    <mrow>
+                        <mi>z</mi>
+                        <mo>-</mo>
+                        <mi>a</mi>
+                    </mrow>
+                </mfrac>
+            </mrow>
+        </math>
+
+        <!-- Second Equation -->
+        <math display="block">
+            <mi>&#x03C3;</mi> <!--Sigma Symbol-->
+            <mo>=</mo>
+            <mroot>
+                <mrow>
+                    <mfrac>
+                        <mn>1</mn>
+                        <mi>N</mi>
+                    </mfrac>
+                    <munderover>
+                        <mo>&#x2211;</mo> <!--Sum-->
+                        <mrow>
+                            <mi>i</mi>
+                            <mo>=</mo>
+                            <mn>1</mn>
+                        </mrow>
+                        <mi>N</mi>
+                    </munderover>
+                    <msup>
+                        <mrow>
+                            <mo>(</mo>
+                            <msub>
+                                <mi>x</mi>
+                                <mi>i</mi>
+                            </msub>
+                            <mo>-</mo>
+                            <mi>&#x03BC;</mi> <!-- mu -->
+                            <mo>)</mo>
+                        </mrow>
+                        <mn>2</mn>
+                    </msup>
+                </mrow>
+                <none></none>
+            </mroot>
+        </math>
+
+        <!-- Third Equation -->
+        <math display="block">
+            <msub>
+                <mo>&#x222B;</mo> <!--Integral-->
+                <mi>D</mi>
+            </msub>
+
+            <mo>(</mo>
+            <mi>&#x2207;</mi> <!--Upside Down Delta-->
+            <mo>&#x22C5;</mo> <!--Dot Product-->
+            <mi>F</mi>
+            <mo>)</mo>
+            <mi>d</mi><mi>V</mi>
+
+            <mo>=</mo>
+
+            <msub>
+                <mo>&#x222B;</mo> <!--Integral-->
+                <mrow>
+                    <mi>&#x03B4;</mi> <!--Lowercase Delta-->
+                    <mi>D</mi>
+                </mrow>
+            </msub>
+            <mi>F</mi>
+            <mo>&#x22C5;</mo> <!--Dot Product-->
+            <mi>n</mi>
+            <mi>d</mi>
+            <mi>S</mi>
+        </math>
+    </div>
+      <div class="clock">
+        <div id="time"></div>
+        <svg width="200px" height="200px" id="animation">
+                <rect width="100%" height="100%"></rect>
+        </svg>
+      </div>
   </main><!-- End #main -->
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

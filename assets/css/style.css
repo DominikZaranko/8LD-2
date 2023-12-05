@@ -1106,3 +1106,42 @@ Custom thing
 #hero .social-links a {
   color: darkslategrey
 }
+
+.math-container{
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+}
+.clock{
+  position: relative;
+  display:flex;
+  justify-content: center;
+  align-content: center;
+  height: 300px;
+  width: 100wv;
+  padding-top: 100px;
+}
+.clock #time{
+  height: min-content;
+  width: min-content;
+  padding: 10px;
+  background-color: lightgreen;
+  font-size: xx-large;
+  border-radius: 10px;
+}
+.clock #animation {
+  position: absolute;
+  top:35px;
+  left: 50% - 100px;
+  z-index: -1;
+  fill:lightgray;
+  animation: rotate 60s linear infinite;
+}
+@keyframes rotate {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg)
+  }
+}
