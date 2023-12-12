@@ -1145,3 +1145,32 @@ Custom thing
       transform: rotate(360deg)
   }
 }
+.guestform{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 10px
+}
+.guestform .formrow{
+  display: flex; 
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 -10px;
+}
+.guestform .formrow div {
+  margin: 0 10px;
+}
+.guestform .formrow * input {
+  width: 250px;
+  border-radius: 10px;
+  background-color: rgb(245, 245, 191);
+}
+.formcontainer{
+  display:flex;
+  align-content: center;
+  justify-self: center;
+  justify-content: center;
+}
+.formrow div button{
+  border-radius: 10px;
+}
